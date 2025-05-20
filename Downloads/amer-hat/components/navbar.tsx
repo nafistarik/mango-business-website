@@ -1,12 +1,12 @@
 "use client";
 
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
-import GreenButton from "./common/GreenButton";
-import NavLink from "./common/NavLink";
-import MobileNavLink from "./common/MobileNavLink";
-import Logo from "./common/Logo";
 import navLinks from "@/data/nav-links";
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
+import GreenButton from "./buttons/GreenButton";
+import MobileNavLink from "./buttons/MobileNavLink";
+import NavLink from "./buttons/NavLink";
+import Logo from "./common/Logo";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

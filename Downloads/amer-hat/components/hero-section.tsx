@@ -1,41 +1,33 @@
-"use client";
-
-import { motion } from "framer-motion";
 import Image from "next/image";
-import GreenButton from "./common/GreenButton";
-import OutlineButton from "./common/OutlineButton";
+import GreenButton from "./buttons/GreenButton";
+import OutlineButton from "./buttons/OutlineButton";
+import Description from "./texts/Description";
+import SlideInLeft from "./framer-motion/SlideInLeft";
+import SlideInBottom from "./framer-motion/SlideInBottom";
+import LeftInfiniteAnimation from "./framer-motion/LeftInfiniteAnimation";
+import RightInfiniteAnimation from "./framer-motion/RightInfiniteAnimation";
 
 export default function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-yellow-50 to-yellow-100 pt-16 pb-24">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-center lg:text-left"
-          >
+          <SlideInLeft>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-leaf-800 leading-tight">
               <span className="block">বাংলাদেশের সেরা</span>
               <span className="text-leaf-600">আমের হাট</span>
             </h1>
-            <p className="mt-4 text-lg md:text-xl text-gray-700 max-w-lg mx-auto lg:mx-0">
+            <Description>
               সরাসরি কৃষকের বাগান থেকে সংগৃহীত তাজা, রসালো এবং মিষ্টি আম এখন
               আপনার হাতের নাগালে।
-            </p>
+            </Description>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <GreenButton>আম কিনুন</GreenButton>
               <OutlineButton>আমাদের সম্পর্কে জানুন</OutlineButton>
             </div>
-          </motion.div>
+          </SlideInLeft>
 
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="relative"
-          >
+          <SlideInBottom>
             <div className="relative h-[300px] md:h-[400px] lg:h-[500px] w-full">
               <Image
                 src="/mango-hero.png"
@@ -46,11 +38,7 @@ export default function HeroSection() {
               />
             </div>
 
-            <motion.div
-              className="absolute -top-10 right-0 md:right-10"
-              animate={{ y: [0, -10, 0] }}
-              transition={{ repeat: Number.POSITIVE_INFINITY, duration: 3 }}
-            >
+            <RightInfiniteAnimation>
               <Image
                 src="/mango-slice.png"
                 alt="আম টুকরা"
@@ -58,13 +46,9 @@ export default function HeroSection() {
                 height={100}
                 className="w-16 h-16 md:w-24 md:h-24"
               />
-            </motion.div>
+            </RightInfiniteAnimation>
 
-            <motion.div
-              className="absolute bottom-10 left-0 md:left-10"
-              animate={{ y: [0, 10, 0] }}
-              transition={{ repeat: Number.POSITIVE_INFINITY, duration: 4 }}
-            >
+            <LeftInfiniteAnimation>
               <Image
                 src="/mango-leaf.png"
                 alt="আমের পাতা"
@@ -72,12 +56,12 @@ export default function HeroSection() {
                 height={80}
                 className="w-16 h-16 md:w-20 md:h-20"
               />
-            </motion.div>
-          </motion.div>
+            </LeftInfiniteAnimation>
+          </SlideInBottom>
         </div>
       </div>
 
-      <div className="wave-shape">
+      {/* <div className="wave-shape">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
@@ -89,7 +73,7 @@ export default function HeroSection() {
             className="shape-fill"
           ></path>
         </svg>
-      </div>
+      </div> */}
     </section>
   );
 }
