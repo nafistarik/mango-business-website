@@ -6,7 +6,7 @@ const OutlineButton = ({ children }: { children: React.ReactNode }) => {
     <Button
       size="lg"
       variant="outline"
-      className="border-leaf-500 text-leaf-700 hover:border-leaf-300 hover:bg-leaf-50 text-lg transition-all duration-300 ease-in-out"
+      className="border-mango-500 text-leaf-700 hover:border-mango-500 hover:bg-mango-50 text-lg transition-all duration-300 ease-in-out"
     >
       {children}
     </Button>
