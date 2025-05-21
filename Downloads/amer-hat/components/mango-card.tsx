@@ -13,7 +13,7 @@ interface MangoCardProps {
 export default function MangoCard({ mango, index }: MangoCardProps) {
   return (
     <OneByOneAnimation index={index}>
-      <div className="relative h-48 bg-yellow-100">
+      <div className="relative h-48 bg-leaf-200">
         <Image
           src={mango.image || "/placeholder.svg"}
           alt={mango.name}

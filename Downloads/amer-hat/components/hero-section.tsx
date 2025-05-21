@@ -6,8 +6,11 @@ import SlideInLeft from "./framer-motion/SlideInLeft";
 import SlideInBottom from "./framer-motion/SlideInBottom";
 import LeftInfiniteAnimation from "./framer-motion/LeftInfiniteAnimation";
 import RightInfiniteAnimation from "./framer-motion/RightInfiniteAnimation";
-import hero from "@/assets/images/home/hero.jpg";
-import PulseInfiniteOpacity from "./framer-motion/PulseInfiniteAnimation";
+import hero from "@/assets/images/home/hero3.png";
+import down from "@/assets/images/home/down.png";
+import up from "@/assets/images/home/up.png";
+import DiagonalMotionWrapper from "./framer-motion/DiagonalMotionWrapper";
+import MiddleInfiniteAnimation from "./framer-motion/MiddleInfiniteAnimation";
 
 export default function HeroSection() {
   return (
@@ -30,8 +33,8 @@ export default function HeroSection() {
           </SlideInLeft>
 
           <SlideInBottom>
-            <PulseInfiniteOpacity>
-              <div className="relative h-[300px] md:h-[400px] lg:h-[500px] w-full">
+            <div className="relative h-[300px] md:h-[400px] lg:h-[500px] w-full">
+              {/* <MiddleInfiniteAnimation> */}
                 <Image
                   src={hero}
                   alt="তাজা আম"
@@ -39,26 +42,26 @@ export default function HeroSection() {
                   className="object-contain"
                   priority
                 />
-              </div>
-            </PulseInfiniteOpacity>
+              {/* </MiddleInfiniteAnimation> */}
+            </div>
 
             <RightInfiniteAnimation>
               <Image
-                src="/mango-slice.png"
+                src={up}
                 alt="আম টুকরা"
                 width={100}
                 height={100}
-                className="w-16 h-16 md:w-24 md:h-24"
+                className="w-24 h-24 md:w-32 md:h-32"
               />
             </RightInfiniteAnimation>
 
             <LeftInfiniteAnimation>
               <Image
-                src="/mango-leaf.png"
+                src={down}
                 alt="আমের পাতা"
                 width={80}
                 height={80}
-                className="w-16 h-16 md:w-20 md:h-20"
+                className="w-24 h-24 md:w-32 md:h-32"
               />
             </LeftInfiniteAnimation>
           </SlideInBottom>

@@ -5,7 +5,7 @@ const PulseInfiniteOpacity = ({ children }: { children: React.ReactNode }) => {
   return (
     <motion.div
       animate={{
-        opacity: [1, 0.7, 1],
+        opacity: [1, 0.6, 1],
       }}
       transition={{
         duration: 3,

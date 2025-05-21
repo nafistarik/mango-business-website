@@ -11,7 +11,7 @@ const Logo = () => {
         alt="আমের হাট লোগো"
         width={1000}
         height={1000}
-        className="w-auto h-12"
+        className="w-auto h-14"
       />
     </Link>
   );

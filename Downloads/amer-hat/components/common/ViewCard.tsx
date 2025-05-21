@@ -3,7 +3,7 @@ import PulseInfiniteAnimation from "../framer-motion/PulseInfiniteAnimation";
 
 const ViewCard = ({ number, text }: { number: string; text: string }) => {
   return (
-    <div className="bg-yellow-50 p-4 rounded-lg text-center border border-leaf-200 ">
+    <div className="bg-leaf-100 p-4 rounded-lg text-center border border-leaf-200 ">
       <PulseInfiniteAnimation>
         <p className="text-3xl font-bold text-leaf-600">{number}</p>
       </PulseInfiniteAnimation>
