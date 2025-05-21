@@ -24,7 +24,9 @@ export default function Navbar() {
         </nav>
 
         <div className="flex items-center gap-4">
-          <GreenButton size="default">অর্ডার করুন</GreenButton>
+          <div className="hidden md:flex">
+            <GreenButton size="default">অর্ডার করুন</GreenButton>
+          </div>
 
           <button
             className="md:hidden"
@@ -33,7 +35,7 @@ export default function Navbar() {
             {isMenuOpen ? (
               <X className="h-6 w-6" />
             ) : (
-              <Menu className="h-6 w-6" />
+              <Menu className="h-6 w-6 text-leaf-700" />
             )}
           </button>
         </div>
@@ -41,8 +43,8 @@ export default function Navbar() {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white border-t">
-          <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
+        <div className="md:hidden border-y border-leaf-200 ">
+          <div className="container mx-auto px-4 pt-4 pb-6 flex flex-col gap-4 ">
             {navLinks.map((link) => (
               <MobileNavLink
                 key={link.href}

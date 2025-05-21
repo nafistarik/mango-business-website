@@ -6,16 +6,18 @@ import SlideInLeft from "./framer-motion/SlideInLeft";
 import SlideInBottom from "./framer-motion/SlideInBottom";
 import LeftInfiniteAnimation from "./framer-motion/LeftInfiniteAnimation";
 import RightInfiniteAnimation from "./framer-motion/RightInfiniteAnimation";
+import hero from "@/assets/images/home/hero.jpg";
+import PulseInfiniteOpacity from "./framer-motion/PulseInfiniteAnimation";
 
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-yellow-50 to-yellow-100 pt-16 pb-24">
+    <section className="relative overflow-hidden pt-16 pb-24">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <SlideInLeft>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-leaf-800 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-leaf-700 leading-tight">
               <span className="block">বাংলাদেশের সেরা</span>
-              <span className="text-leaf-600">আমের হাট</span>
+              <span className="text-leaf-500">আমের হাট</span>
             </h1>
             <Description>
               সরাসরি কৃষকের বাগান থেকে সংগৃহীত তাজা, রসালো এবং মিষ্টি আম এখন
@@ -28,15 +30,17 @@ export default function HeroSection() {
           </SlideInLeft>
 
           <SlideInBottom>
-            <div className="relative h-[300px] md:h-[400px] lg:h-[500px] w-full">
-              <Image
-                src="/mango-hero.png"
-                alt="তাজা আম"
-                fill
-                className="object-contain"
-                priority
-              />
-            </div>
+            <PulseInfiniteOpacity>
+              <div className="relative h-[300px] md:h-[400px] lg:h-[500px] w-full">
+                <Image
+                  src={hero}
+                  alt="তাজা আম"
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
+            </PulseInfiniteOpacity>
 
             <RightInfiniteAnimation>
               <Image
