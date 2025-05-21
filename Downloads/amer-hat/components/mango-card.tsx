@@ -4,6 +4,8 @@ import { ShoppingCart, Calendar } from "lucide-react";
 import type { Mango } from "@/data/mango-data";
 import OneByOneAnimation from "./framer-motion/OneByOneAnimation";
 import GreenButton from "./buttons/GreenButton";
+import Title from "./texts/Title";
+import Description from "./texts/Description";
 
 interface MangoCardProps {
   mango: Mango;
@@ -12,34 +14,37 @@ interface MangoCardProps {
 
 export default function MangoCard({ mango, index }: MangoCardProps) {
   return (
-    <OneByOneAnimation index={index}>
-      <div className="relative h-48 bg-leaf-200">
-        <Image
-          src={mango.image || "/placeholder.svg"}
-          alt={mango.name}
-          fill
-          className="object-contain p-4"
-        />
-      </div>
-      <div className="p-6">
-        <h3 className="text-2xl font-bold text-leaf-700 mb-2">{mango.name}</h3>
-        <p className="text-gray-700 mb-4">{mango.description}</p>
-        <div className="flex items-center gap-2 mb-2">
-          <Calendar className="h-5 w-5 text-leaf-500" />
-          <span className="text-gray-600">মৌসুম: {mango.season}</span>
+    <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+      <OneByOneAnimation index={index}>
+        {" "}
+        <div className="relative aspect-[5/3] bg-leaf-200">
+          <Image
+            src={mango.image || "/placeholder.svg"}
+            alt={mango.name}
+            fill
+            className="object-contain p-4"
+          />
         </div>
-        <div className="flex justify-between items-center mt-4">
-          <p className="text-xl font-bold text-leaf-800">
-            {mango.pricePerKg}{" "}
-            <span className="text-sm font-normal">/কেজি</span>
-          </p>
+        <div className="p-6">
+          <Title>{mango.name}</Title>
+          <Description>{mango.description}</Description>
+          <div className="flex items-center gap-2 my-2">
+            <Calendar className="h-5 w-5 text-leaf-500" />
+            <span className="text-gray-600">মৌসুম: {mango.season}</span>
+          </div>
+          <div className="flex justify-between items-center mt-4">
+            <p className="text-xl font-bold text-leaf-800">
+              {mango.pricePerKg}{" "}
+              <span className="text-sm font-normal">/কেজি</span>
+            </p>
 
-          <GreenButton size="sm">
-            <ShoppingCart className="h-4 w-4 mr-2" />
-            অর্ডার করুন
-          </GreenButton>
+            <GreenButton size="sm">
+              <ShoppingCart className="h-4 w-4 mr-2" />
+              অর্ডার করুন
+            </GreenButton>
+          </div>
         </div>
-      </div>
-    </OneByOneAnimation>
+      </OneByOneAnimation>
+    </div>
   );
 }

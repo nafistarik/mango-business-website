@@ -8,10 +8,12 @@ import { reviewList } from "@/data/review-data";
 import SlideInBottom from "./framer-motion/SlideInBottom";
 import Header from "./texts/Header";
 import Description from "./texts/Description";
+import Name from "./texts/Name";
+import OneByOneAnimation from "./framer-motion/OneByOneAnimation";
 
 export default function ReviewSection() {
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-white to-yellow-50">
+    <section className="py-16 md:py-24 ">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <SlideInBottom>
@@ -28,41 +30,36 @@ export default function ReviewSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {reviewList.map((review, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="bg-white p-6 rounded-2xl shadow-lg"
-            >
-              <div className="flex items-center gap-4 mb-4">
-                <div className="relative w-14 h-14 rounded-full overflow-hidden">
-                  <Image
-                    src={review.avatar || "/placeholder.svg"}
-                    alt={review.name}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div>
-                  <h4 className="font-bold text-mango-800">{review.name}</h4>
-                  <div className="flex items-center">
-                    {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className={`h-4 w-4 ${
-                          i < review.rating
-                            ? "text-yellow-400 fill-yellow-400"
-                            : "text-gray-300"
-                        }`}
-                      />
-                    ))}
+            <div className="bg-gradient-to-r from-white to-yellow-50 p-6 rounded-2xl shadow-lg">
+              <OneByOneAnimation key={index} index={index}>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="relative w-14 h-14 rounded-full overflow-hidden">
+                    <Image
+                      src={review.avatar || "/placeholder.svg"}
+                      alt={review.name}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div>
+                    <Name>{review.name}</Name>
+                    <div className="flex items-center">
+                      {[...Array(5)].map((_, i) => (
+                        <Star
+                          key={i}
+                          className={`h-4 w-4 ${
+                            i < review.rating
+                              ? "text-yellow-400 fill-yellow-400"
+                              : "text-gray-300"
+                          }`}
+                        />
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
-              <p className="text-gray-700">{review.comment}</p>
-            </motion.div>
+                <Description>{review.comment}</Description>
+              </OneByOneAnimation>
+            </div>
           ))}
         </div>
       </div>

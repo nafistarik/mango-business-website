@@ -4,6 +4,7 @@ import SlideInLeft from "./framer-motion/SlideInLeft";
 import SlideInRight from "./framer-motion/SlideInRight";
 import Description from "./texts/Description";
 import ViewCard from "./common/ViewCard";
+import about from "@/assets/images/about/about.jpg";
 
 export default function AboutSection() {
   return (
@@ -18,13 +19,13 @@ export default function AboutSection() {
             <div className="relative rounded-2xl overflow-hidden">
               <div className="relative h-[300px] md:h-[400px] w-full rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="/farmer.jpg"
+                  src={about}
                   alt="আম চাষি"
                   fill
                   className="object-cover"
                 />
               </div>
-              <div className="absolute -bottom-5 -right-5 bg-mango-100 p-3 rounded-full shadow-lg">
+              {/* <div className="absolute -bottom-5 -right-5 bg-mango-100 p-3 rounded-full shadow-lg">
                 <Image
                   src="/mango-icon.png"
                   alt="আম আইকন"
@@ -32,7 +33,7 @@ export default function AboutSection() {
                   height={60}
                   className="w-16 h-16"
                 />
-              </div>
+              </div> */}
             </div>
           </SlideInLeft>
 

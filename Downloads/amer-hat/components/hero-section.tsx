@@ -18,9 +18,9 @@ export default function HeroSection() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <SlideInLeft>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-leaf-700 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-leaf-600 leading-tight">
               <span className="block">বাংলাদেশের সেরা</span>
-              <span className="text-leaf-500">আমের হাট</span>
+              <span className="text-mango-400">আমের হাট</span>
             </h1>
             <Description>
               সরাসরি কৃষকের বাগান থেকে সংগৃহীত তাজা, রসালো এবং মিষ্টি আম এখন
@@ -35,13 +35,13 @@ export default function HeroSection() {
           <SlideInBottom>
             <div className="relative h-[300px] md:h-[400px] lg:h-[500px] w-full">
               {/* <MiddleInfiniteAnimation> */}
-                <Image
-                  src={hero}
-                  alt="তাজা আম"
-                  fill
-                  className="object-contain"
-                  priority
-                />
+              <Image
+                src={hero}
+                alt="তাজা আম"
+                fill
+                className="object-contain"
+                priority
+              />
               {/* </MiddleInfiniteAnimation> */}
             </div>
 
