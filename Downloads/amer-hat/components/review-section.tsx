@@ -28,7 +28,7 @@ export default function ReviewSection() {
           {reviewList.map((review, index) => (
             <div
               key={index}
-              className="bg-gradient-to-r from-white to-leaf-100 p-6 rounded-2xl border-2 border-leaf-200"
+              className="bg-gradient-to-b from-white to-mango-25 p-6 rounded-xl border-2 border-mango-50"
             >
               <OneByOneAnimation index={index}>
                 <div className="flex items-center gap-4 mb-4">

@@ -54,6 +54,7 @@ const config = {
           foreground: "hsl(var(--card-foreground))",
         },
         mango: {
+          25: "#fffde3",
           50: "#FEF9C3",
           100: "#FEF08A",
           200: "#FDE047",

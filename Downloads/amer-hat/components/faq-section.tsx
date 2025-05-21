@@ -33,12 +33,12 @@ export default function FAQSection() {
               <OneByOneAnimation key={index} index={index}>
                 <AccordionItem
                   value={`item-${index}`}
-                  className="border border-mango-100 rounded-lg mb-4 px-4"
+                  className="border-2 border-leaf-100 rounded-lg mb-4 px-4"
                 >
-                  <AccordionTrigger className="text-lg font-medium text-mango-800 hover:text-mango-600 py-4">
+                  <AccordionTrigger className="text-lg font-medium text-leaf-800 hover:text-leaf-500 hover:no-underline transition-all duration-300 ease-in-out py-4">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-gray-700 pb-4">
+                  <AccordionContent className="text-gray-700 pb-4 text-base">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
