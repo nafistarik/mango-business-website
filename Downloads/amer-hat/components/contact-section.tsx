@@ -1,147 +1,139 @@
-"use client"
-
-import { useEffect, useState } from "react"
-import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Phone, Mail, MapPin, Facebook, Send } from "lucide-react"
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Phone, MapPin, Facebook, Send } from "lucide-react";
+import SlideInLeft from "./framer-motion/SlideInLeft";
+import SlideInRight from "./framer-motion/SlideInRight";
+import SlideInBottom from "./framer-motion/SlideInBottom";
+import Header from "./texts/Header";
+import Description from "./texts/Description";
+import Title from "./texts/Title";
+import ContactInfoItem from "./common/ContactInfoItem";
 
 export default function ContactSection() {
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  if (!mounted) return null
-
   return (
-    <section id="contact" className="py-16 md:py-24 bg-gradient-to-b from-yellow-50 to-white">
+    <section id="contact" className="py-16 md:py-24 ">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="inline-block text-3xl md:text-4xl font-bold text-mango-800 relative">
-              যোগাযোগ করুন
-              <span className="absolute -bottom-2 left-0 w-full h-1 bg-mango-400 rounded-full"></span>
-            </h2>
-            <p className="mt-4 text-lg text-gray-700 max-w-2xl mx-auto">
-              আমাদের সাথে যোগাযোগ করুন। আমরা আপনার যেকোনো প্রশ্নের উত্তর দিতে সর্বদা প্রস্তুত।
-            </p>
-          </motion.div>
+          <SlideInBottom>
+            <Header>যোগাযোগ করুন</Header>
+            <div className="flex justify-center">
+              {" "}
+              <Description>
+                আমাদের সাথে যোগাযোগ করুন। আমরা আপনার যেকোনো প্রশ্নের উত্তর দিতে
+                সর্বদা প্রস্তুত।
+              </Description>
+            </div>
+          </SlideInBottom>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-          >
-            <div className="bg-white p-6 rounded-2xl shadow-lg">
-              <h3 className="text-2xl font-bold text-mango-700 mb-6">আমাদের ঠিকানা</h3>
+          <SlideInLeft>
+            <div className=" p-8 rounded-xl bg-white border-2 border-leaf-100">
+              <Title>আমাদের ঠিকানা</Title>
 
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="bg-mango-100 p-3 rounded-full">
-                    <Phone className="h-6 w-6 text-mango-600" />
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-mango-800 mb-1">ফোন নম্বর</h4>
-                    <p className="text-gray-700">+৮৮০১৭১২৩৪৫৬৭৮</p>
-                    <p className="text-gray-700">+৮৮০১৮১২৩৪৫৬৭৮</p>
-                  </div>
-                </div>
+              <div className="space-y-6 pt-3">
+                <ContactInfoItem
+                  Icon={Phone}
+                  title="ফোন নম্বর"
+                  info1="+৮৮০১৭১২৩৪৫৬৭৮"
+                  info2="+৮৮০১৮১২৩৪৫৬৭৮"
+                />
 
-                <div className="flex items-start gap-4">
-                  <div className="bg-mango-100 p-3 rounded-full">
-                    <Mail className="h-6 w-6 text-mango-600" />
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-mango-800 mb-1">ইমেইল</h4>
-                    <p className="text-gray-700">info@amerhat.com</p>
-                    <p className="text-gray-700">contact@amerhat.com</p>
-                  </div>
-                </div>
+                <ContactInfoItem
+                  Icon={MapPin}
+                  title="ঠিকানা"
+                  info1="১২৩/এ, মিরপুর রোড, ঢাকা-১২১৬"
+                  info2="বাংলাদেশ"
+                />
 
-                <div className="flex items-start gap-4">
-                  <div className="bg-mango-100 p-3 rounded-full">
-                    <MapPin className="h-6 w-6 text-mango-600" />
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-mango-800 mb-1">ঠিকানা</h4>
-                    <p className="text-gray-700">১২৩/এ, মিরপুর রোড, ঢাকা-১২১৬</p>
-                    <p className="text-gray-700">বাংলাদেশ</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="bg-mango-100 p-3 rounded-full">
-                    <Facebook className="h-6 w-6 text-mango-600" />
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-mango-800 mb-1">সোশ্যাল মিডিয়া</h4>
-                    <p className="text-gray-700">facebook.com/amerhat</p>
-                    <p className="text-gray-700">instagram.com/amerhat</p>
-                  </div>
-                </div>
+                <ContactInfoItem
+                  Icon={Facebook}
+                  title="সোশ্যাল মিডিয়া"
+                  info1="facebook.com/amerhat"
+                  info2="instagram.com/amerhat"
+                />
               </div>
             </div>
-          </motion.div>
+          </SlideInLeft>
 
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
+          <SlideInRight>
             <div className="bg-white p-6 rounded-2xl shadow-lg">
-              <h3 className="text-2xl font-bold text-mango-700 mb-6">আমাদের মেসেজ পাঠান</h3>
+              <h3 className="text-2xl font-bold text-leaf-700 mb-6">
+                আমাদের মেসেজ পাঠান
+              </h3>
 
               <form className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium text-gray-700"
+                    >
                       নাম
                     </label>
-                    <Input id="name" placeholder="আপনার নাম" className="w-full" />
+                    <Input
+                      id="name"
+                      placeholder="আপনার নাম"
+                      className="w-full"
+                    />
                   </div>
                   <div className="space-y-2">
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
+                    <label
+                      htmlFor="phone"
+                      className="block text-sm font-medium text-gray-700"
+                    >
                       ফোন নম্বর
                     </label>
-                    <Input id="phone" placeholder="আপনার ফোন নম্বর" className="w-full" />
+                    <Input
+                      id="phone"
+                      placeholder="আপনার ফোন নম্বর"
+                      className="w-full"
+                    />
                   </div>
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-700"
+                  >
                     ইমেইল
                   </label>
-                  <Input id="email" type="email" placeholder="আপনার ইমেইল" className="w-full" />
+                  <Input
+                    id="email"
+                    type="email"
+                    placeholder="আপনার ইমেইল"
+                    className="w-full"
+                  />
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-700"
+                  >
                     মেসেজ
                   </label>
-                  <Textarea id="message" placeholder="আপনার মেসেজ লিখুন" className="w-full min-h-[120px]" />
+                  <Textarea
+                    id="message"
+                    placeholder="আপনার মেসেজ লিখুন"
+                    className="w-full min-h-[120px]"
+                  />
                 </div>
 
-                <Button type="submit" className="w-full bg-mango-500 hover:bg-mango-600 text-white">
+                <Button
+                  type="submit"
+                  className="w-full bg-leaf-500 hover:bg-leaf-600 text-white"
+                >
                   <Send className="h-4 w-4 mr-2" />
                   মেসেজ পাঠান
                 </Button>
               </form>
             </div>
-          </motion.div>
+          </SlideInRight>
         </div>
       </div>
     </section>
-  )
+  );
 }

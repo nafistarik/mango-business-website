@@ -8,7 +8,7 @@ import about from "@/assets/images/about/about.jpg";
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-16 md:py-24 bg-white">
+    <section id="about" className="py-16 md:py-24 ">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <Header>আমাদের কথা</Header>
