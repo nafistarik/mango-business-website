@@ -22,7 +22,7 @@ export default function MangoCard({ mango, index }: MangoCardProps) {
             src={mango.image || "/placeholder.svg"}
             alt={mango.name}
             fill
-            className="object-contain p-4"
+            className="object-cover hover:scale-105 transition-all duration-500 ease-in-out"
           />
         </div>
         <div className="p-6">

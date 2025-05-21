@@ -1,8 +1,4 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { Star } from "lucide-react";
 import { reviewList } from "@/data/review-data";
 import SlideInBottom from "./framer-motion/SlideInBottom";
@@ -30,10 +26,13 @@ export default function ReviewSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {reviewList.map((review, index) => (
-            <div className="bg-gradient-to-r from-white to-yellow-50 p-6 rounded-2xl shadow-lg">
-              <OneByOneAnimation key={index} index={index}>
+            <div
+              key={index}
+              className="bg-gradient-to-r from-white to-leaf-100 p-6 rounded-2xl border-2 border-leaf-200"
+            >
+              <OneByOneAnimation index={index}>
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="relative w-14 h-14 rounded-full overflow-hidden">
+                  <div className="relative w-20 h-20 rounded-full overflow-hidden">
                     <Image
                       src={review.avatar || "/placeholder.svg"}
                       alt={review.name}
@@ -47,7 +46,7 @@ export default function ReviewSection() {
                       {[...Array(5)].map((_, i) => (
                         <Star
                           key={i}
-                          className={`h-4 w-4 ${
+                          className={`h-6 w-6 ${
                             i < review.rating
                               ? "text-yellow-400 fill-yellow-400"
                               : "text-gray-300"
