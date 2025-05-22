@@ -9,7 +9,7 @@ import OneByOneAnimation from "./framer-motion/OneByOneAnimation";
 
 export default function ReviewSection() {
   return (
-    <section className="py-16 md:py-24 ">
+    <section className="pt-24 min-h-screen">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <SlideInBottom>

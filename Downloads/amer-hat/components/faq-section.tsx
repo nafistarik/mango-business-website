@@ -12,7 +12,7 @@ import OneByOneAnimation from "./framer-motion/OneByOneAnimation";
 
 export default function FAQSection() {
   return (
-    <section id="faq" className="py-16 md:py-24 ">
+    <section id="faq" className="pt-24 min-h-screen ">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <SlideInBottom>
@@ -33,7 +33,7 @@ export default function FAQSection() {
               <OneByOneAnimation key={index} index={index}>
                 <AccordionItem
                   value={`item-${index}`}
-                  className="border-2 border-leaf-100 rounded-lg mb-4 px-4"
+                  className="border-2 border-leaf-200 rounded-lg mb-4 px-4"
                 >
                   <AccordionTrigger className="text-lg font-medium text-leaf-800 hover:text-leaf-500 hover:no-underline transition-all duration-300 ease-in-out py-4">
                     {faq.question}

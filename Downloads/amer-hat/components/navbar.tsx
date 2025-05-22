@@ -12,7 +12,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md shadow-sm">
+    <header className="sticky top-0 z-50 w-full bg-white/50 backdrop-blur-md shadow-sm">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <Logo />
         <nav className="hidden md:flex items-center gap-6">

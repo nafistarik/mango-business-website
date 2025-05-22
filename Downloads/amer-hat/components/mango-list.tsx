@@ -6,7 +6,7 @@ import Description from "./texts/Description";
 
 export default function MangoList() {
   return (
-    <section id="mangoes" className="py-16 md:py-24">
+    <section id="mangoes" className="pt-24 min-h-screen">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <SlideInBottom>

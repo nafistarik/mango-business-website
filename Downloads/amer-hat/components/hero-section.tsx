@@ -12,7 +12,7 @@ import up from "@/assets/images/home/up.png";
 
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden pt-16 pb-24">
+    <section className="relative overflow-hidden pt-24 min-h-screen">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <SlideInLeft>

@@ -1,7 +1,3 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Send } from "lucide-react";
 import SlideInLeft from "./framer-motion/SlideInLeft";
 import SlideInRight from "./framer-motion/SlideInRight";
 import SlideInBottom from "./framer-motion/SlideInBottom";
@@ -13,7 +9,7 @@ import { contactItems } from "@/data/contact-data";
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="py-16 md:py-24 ">
+    <section id="contact" className="pt-24 min-h-screen">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <SlideInBottom>
