@@ -9,7 +9,7 @@ import { contactItems } from "@/data/contact-data";
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="pt-24 min-h-screen">
+    <section id="contact" className="pt-24 pb-12 min-h-screen">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <SlideInBottom>
