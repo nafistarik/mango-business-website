@@ -6,11 +6,9 @@ import SlideInLeft from "./framer-motion/SlideInLeft";
 import SlideInBottom from "./framer-motion/SlideInBottom";
 import LeftInfiniteAnimation from "./framer-motion/LeftInfiniteAnimation";
 import RightInfiniteAnimation from "./framer-motion/RightInfiniteAnimation";
-import hero from "@/assets/images/home/hero3.png";
+import hero from "@/assets/images/home/hero7.png";
 import down from "@/assets/images/home/down.png";
 import up from "@/assets/images/home/up.png";
-import DiagonalMotionWrapper from "./framer-motion/DiagonalMotionWrapper";
-import MiddleInfiniteAnimation from "./framer-motion/MiddleInfiniteAnimation";
 
 export default function HeroSection() {
   return (
@@ -39,7 +37,7 @@ export default function HeroSection() {
                 src={hero}
                 alt="তাজা আম"
                 fill
-                className="object-contain"
+                className="object-contain pb-8"
                 priority
               />
               {/* </MiddleInfiniteAnimation> */}

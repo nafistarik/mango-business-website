@@ -1,14 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Phone, MapPin, Facebook, Send } from "lucide-react";
+import { Send } from "lucide-react";
 import SlideInLeft from "./framer-motion/SlideInLeft";
 import SlideInRight from "./framer-motion/SlideInRight";
 import SlideInBottom from "./framer-motion/SlideInBottom";
 import Header from "./texts/Header";
 import Description from "./texts/Description";
 import Title from "./texts/Title";
-import ContactInfoItem from "./common/ContactInfoItem";
+import ContactItem from "./common/ContactItem";
+import { contactItems } from "@/data/contact-data";
 
 export default function ContactSection() {
   return (
@@ -33,32 +34,20 @@ export default function ContactSection() {
               <Title>আমাদের ঠিকানা</Title>
 
               <div className="space-y-6 pt-3">
-                <ContactInfoItem
-                  Icon={Phone}
-                  title="ফোন নম্বর"
-                  info1="+৮৮০১৭১২৩৪৫৬৭৮"
-                  info2="+৮৮০১৮১২৩৪৫৬৭৮"
-                />
-
-                <ContactInfoItem
-                  Icon={MapPin}
-                  title="ঠিকানা"
-                  info1="১২৩/এ, মিরপুর রোড, ঢাকা-১২১৬"
-                  info2="বাংলাদেশ"
-                />
-
-                <ContactInfoItem
-                  Icon={Facebook}
-                  title="সোশ্যাল মিডিয়া"
-                  info1="facebook.com/amerhat"
-                  info2="instagram.com/amerhat"
-                />
+                {contactItems.map((item, index) => (
+                  <ContactItem
+                    key={index}
+                    Icon={item.icon}
+                    title={item.title}
+                    infos={item.infos}
+                  />
+                ))}
               </div>
             </div>
           </SlideInLeft>
 
           <SlideInRight>
-            <div className="bg-white p-6 rounded-2xl shadow-lg">
+            {/* <div className="bg-white p-6 rounded-2xl shadow-lg">
               <h3 className="text-2xl font-bold text-leaf-700 mb-6">
                 আমাদের মেসেজ পাঠান
               </h3>
@@ -130,6 +119,18 @@ export default function ContactSection() {
                   মেসেজ পাঠান
                 </Button>
               </form>
+            </div> */}
+            <div className="h-[390px] overflow-hidden rounded-lg">
+              <iframe
+                title="Purana Paltan, Dhaka Location Map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14608.036944846636!2d90.39508083955077!3d23.73500400000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8bd5c0a95a9%3A0x3e7cd243d8b2760!2sPurana%20Paltan%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1653037535393!5m2!1sen!2sbd"
+                width="100%"
+                height="390"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </SlideInRight>
         </div>

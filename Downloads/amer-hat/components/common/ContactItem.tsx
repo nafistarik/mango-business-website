@@ -1,28 +1,29 @@
 import React from "react";
 
-const ContactInfoItem = ({
+const ContactItem = ({
   Icon,
   title,
-  info1,
-  info2,
+  infos,
 }: {
   Icon: React.ElementType;
   title: string;
-  info1: string;
-  info2: string;
+  infos: string[];
 }) => {
   return (
-    <div className="flex items-start gap-4">
+    <div className="flex items-center  gap-4">
       <div className="bg-leaf-100 p-3 rounded-full">
         <Icon className="h-6 w-6 text-leaf-600" />
       </div>
-      <div>
+      <div className="flex flex-col items-start">
         <h4 className="font-medium text-leaf-800 mb-1">{title}</h4>
-        <p className="text-gray-700">{info1}</p>
-        <p className="text-gray-700">{info2}</p>
+        {infos.map((info, index) => (
+          <p key={index} className="text-gray-700">
+            {info}
+          </p>
+        ))}
       </div>
     </div>
   );
 };
 
-export default ContactInfoItem;
+export default ContactItem;
