@@ -1,162 +1,84 @@
 import Link from "next/link";
-import Image from "next/image";
-import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 import Logo from "./common/Logo";
+import { socialLinks } from "@/data/social-links";
+import { routeLinks } from "@/data/route-links";
+import { mangoLinks } from "@/data/mango-links";
+import { communicationLists } from "@/data/communication-list";
 
 export default function Footer() {
   return (
     <footer className="bg-leaf-900 text-white">
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 pt-12 pb-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <Logo />
-            <p className="text-mango-100 my-4">
+            <p className="text-leaf-200 my-4">
               বাংলাদেশের সেরা আম সরবরাহকারী। আমরা সরাসরি কৃষকদের কাছ থেকে আম
               সংগ্রহ করি এবং গ্রাহকদের কাছে পৌঁছে দেই।
             </p>
             <div className="flex gap-4">
-              <Link
-                href="#"
-                className="bg-mango-700 p-2 rounded-full hover:bg-mango-600 transition-colors"
-              >
-                <Facebook className="h-5 w-5" />
-              </Link>
-              <Link
-                href="#"
-                className="bg-mango-700 p-2 rounded-full hover:bg-mango-600 transition-colors"
-              >
-                <Instagram className="h-5 w-5" />
-              </Link>
-              <Link
-                href="#"
-                className="bg-mango-700 p-2 rounded-full hover:bg-mango-600 transition-colors"
-              >
-                <Twitter className="h-5 w-5" />
-              </Link>
-              <Link
-                href="#"
-                className="bg-mango-700 p-2 rounded-full hover:bg-mango-600 transition-colors"
-              >
-                <Youtube className="h-5 w-5" />
-              </Link>
+              {socialLinks?.map((link, index) => {
+                const SocialLink = link.icon;
+                return (
+                  <Link
+                    key={index}
+                    href={link.href}
+                    className="bg-leaf-700 p-2 rounded-full hover:bg-leaf-600 transition-colors"
+                  >
+                    <SocialLink className="h-5 w-5" />
+                  </Link>
+                );
+              })}
             </div>
           </div>
 
           <div>
             <h3 className="text-lg font-bold mb-4">দ্রুত লিঙ্ক</h3>
             <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/"
-                  className="text-mango-100 hover:text-white transition-colors"
-                >
-                  হোম
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#about"
-                  className="text-mango-100 hover:text-white transition-colors"
-                >
-                  আমাদের কথা
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#mangoes"
-                  className="text-mango-100 hover:text-white transition-colors"
-                >
-                  আমাদের আম
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#faq"
-                  className="text-mango-100 hover:text-white transition-colors"
-                >
-                  প্রশ্ন ও উত্তর
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#contact"
-                  className="text-mango-100 hover:text-white transition-colors"
-                >
-                  যোগাযোগ
-                </Link>
-              </li>
+              {routeLinks?.map((link, index) => (
+                <li key={index}>
+                  <Link
+                    href={link.href}
+                    className="text-leaf-200 hover:text-mango-100 transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div>
             <h3 className="text-lg font-bold mb-4">আমাদের আম</h3>
             <ul className="space-y-2">
-              <li>
-                <Link
-                  href="#"
-                  className="text-mango-100 hover:text-white transition-colors"
-                >
-                  হিমসাগর
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-mango-100 hover:text-white transition-colors"
-                >
-                  ল্যাংড়া
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-mango-100 hover:text-white transition-colors"
-                >
-                  গোপালভোগ
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-mango-100 hover:text-white transition-colors"
-                >
-                  আম্রপালি
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-mango-100 hover:text-white transition-colors"
-                >
-                  ফজলি
-                </Link>
-              </li>
+              {mangoLinks?.map((link, index) => (
+                <li key={index}>
+                  <Link
+                    href={link.href}
+                    className="text-leaf-200 hover:text-mango-100 transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div>
             <h3 className="text-lg font-bold mb-4">যোগাযোগ</h3>
             <ul className="space-y-2">
-              <li className="flex items-start gap-2">
-                <span>📞</span>
-                <span className="text-mango-100">+৮৮০১৭১২৩৪৫৬৭৮</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span>✉️</span>
-                <span className="text-mango-100">info@amerhat.com</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span>📍</span>
-                <span className="text-mango-100">
-                  ১২৩/এ, মিরপুর রোড, ঢাকা-১২১৬, বাংলাদেশ
-                </span>
-              </li>
+              {communicationLists?.map((list, index) => (
+                <li key={index} className="flex items-start gap-2">
+                  <span>{list.icon}</span>
+                  <span className="text-leaf-200">{list.text}</span>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-mango-700 mt-8 pt-8 text-center">
-          <p className="text-mango-100">
+        <div className="border-t border-leaf-700 mt-8 pt-4 text-center">
+          <p className="text-leaf-100">
             &copy; {new Date().getFullYear()} আমের হাট। সর্বস্বত্ব সংরক্ষিত।
           </p>
         </div>

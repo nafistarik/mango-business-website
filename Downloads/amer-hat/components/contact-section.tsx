@@ -47,7 +47,20 @@ export default function ContactSection() {
           </SlideInLeft>
 
           <SlideInRight>
-            {/* <div className="bg-white p-6 rounded-2xl shadow-lg">
+            <div className="h-[390px] overflow-hidden rounded-lg">
+              <iframe
+                title="Purana Paltan, Dhaka Location Map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28991.6542445214!2d88.15054149319674!3d24.728364002041186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fbad348feb4703%3A0x960f879a969b262d!2zS2Fuc2F0IE1hbmdvIE1hcmtldCjgppXgpr7gpqjgprjgpr7gpp8g4KaG4KauIOCmrOCmvuCmnOCmvuCmsCk!5e0!3m2!1sen!2sbd!4v1747914377997!5m2!1sen!2sbd"
+                width="100%"
+                height="390"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </SlideInRight>
+          {/* <div className="bg-white p-6 rounded-2xl shadow-lg">
               <h3 className="text-2xl font-bold text-leaf-700 mb-6">
                 আমাদের মেসেজ পাঠান
               </h3>
@@ -120,19 +133,6 @@ export default function ContactSection() {
                 </Button>
               </form>
             </div> */}
-            <div className="h-[390px] overflow-hidden rounded-lg">
-              <iframe
-                title="Purana Paltan, Dhaka Location Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14608.036944846636!2d90.39508083955077!3d23.73500400000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8bd5c0a95a9%3A0x3e7cd243d8b2760!2sPurana%20Paltan%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1653037535393!5m2!1sen!2sbd"
-                width="100%"
-                height="390"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-          </SlideInRight>
         </div>
       </div>
     </section>
