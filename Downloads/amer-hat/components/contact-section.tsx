@@ -29,7 +29,7 @@ export default function ContactSection() {
             <div className=" p-8 rounded-xl bg-white border-2 border-leaf-100">
               <Title>আমাদের ঠিকানা</Title>
 
-              <div className="space-y-6 pt-3">
+              <div className="space-y-6 pt-3 text-start">
                 {contactItems.map((item, index) => (
                   <ContactItem
                     key={index}
@@ -43,12 +43,12 @@ export default function ContactSection() {
           </SlideInLeft>
 
           <SlideInRight>
-            <div className="h-[390px] overflow-hidden rounded-lg">
+            <div className="h-[394px] overflow-hidden rounded-lg">
               <iframe
                 title="Purana Paltan, Dhaka Location Map"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28991.6542445214!2d88.15054149319674!3d24.728364002041186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fbad348feb4703%3A0x960f879a969b262d!2zS2Fuc2F0IE1hbmdvIE1hcmtldCjgppXgpr7gpqjgprjgpr7gpp8g4KaG4KauIOCmrOCmvuCmnOCmvuCmsCk!5e0!3m2!1sen!2sbd!4v1747914377997!5m2!1sen!2sbd"
                 width="100%"
-                height="390"
+                height="394"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"

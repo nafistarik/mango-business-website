@@ -17,7 +17,7 @@ export default function AboutSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <SlideInLeft>
             <div className="relative rounded-2xl overflow-hidden">
-              <div className="relative h-[300px] md:h-[400px] w-full rounded-2xl overflow-hidden shadow-lg">
+              <div className="relative h-[250px] md:h-[400px] w-full rounded-2xl overflow-hidden shadow-lg">
                 <Image
                   src={about}
                   alt="আম চাষি"
@@ -38,7 +38,8 @@ export default function AboutSection() {
           </SlideInLeft>
 
           <SlideInRight>
-            <Description>
+{/* <div className="bg-blue-200"> */}
+              <Description>
               আমের হাট শুরু হয়েছিল ২০১৮ সালে, যখন আমরা দেখলাম যে বাংলাদেশের
               অনেক কৃষক তাদের উৎপাদিত আম সঠিক মূল্যে বিক্রি করতে পারছেন না। আমরা
               সিদ্ধান্ত নিলাম যে আমরা কৃষকদের সাথে সরাসরি যোগাযোগ করে তাদের
@@ -55,6 +56,8 @@ export default function AboutSection() {
               <ViewCard number="১০০০+" text="সন্তুষ্ট গ্রাহক" />
               <ViewCard number="১৫+" text="আমের প্রজাতি" />
             </div>
+{/* </div> */}
+
           </SlideInRight>
         </div>
       </div>
