@@ -1,14 +1,14 @@
-import Image from "next/image";
-import GreenButton from "./buttons/GreenButton";
-import OutlineButton from "./buttons/OutlineButton";
-import Description from "./texts/Description";
-import SlideInLeft from "./framer-motion/SlideInLeft";
-import SlideInBottom from "./framer-motion/SlideInBottom";
-import LeftInfiniteAnimation from "./framer-motion/LeftInfiniteAnimation";
-import RightInfiniteAnimation from "./framer-motion/RightInfiniteAnimation";
-import hero from "@/assets/images/home/hero7.png";
 import down from "@/assets/images/home/down.png";
+import hero from "@/assets/images/home/hero7.png";
 import up from "@/assets/images/home/up.png";
+import Image from "next/image";
+import GreenButton from "../../components/buttons/GreenButton";
+import OutlineButton from "../../components/buttons/OutlineButton";
+import LeftInfiniteAnimation from "../../components/framer-motion/LeftInfiniteAnimation";
+import RightInfiniteAnimation from "../../components/framer-motion/RightInfiniteAnimation";
+import SlideInBottom from "../../components/framer-motion/SlideInBottom";
+import SlideInLeft from "../../components/framer-motion/SlideInLeft";
+import Description from "../../components/texts/Description";
 
 export default function HeroSection() {
   return (

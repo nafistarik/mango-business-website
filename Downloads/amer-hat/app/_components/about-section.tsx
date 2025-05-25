@@ -1,10 +1,10 @@
-import Image from "next/image";
-import Header from "./texts/Header";
-import SlideInLeft from "./framer-motion/SlideInLeft";
-import SlideInRight from "./framer-motion/SlideInRight";
-import Description from "./texts/Description";
-import ViewCard from "./common/ViewCard";
 import about from "@/assets/images/about/about.jpg";
+import ViewCard from "@/components/cards/ViewCard";
+import SlideInLeft from "@/components/framer-motion/SlideInLeft";
+import SlideInRight from "@/components/framer-motion/SlideInRight";
+import Description from "@/components/texts/Description";
+import Header from "@/components/texts/Header";
+import Image from "next/image";
 
 export default function AboutSection() {
   return (
@@ -38,8 +38,8 @@ export default function AboutSection() {
           </SlideInLeft>
 
           <SlideInRight>
-{/* <div className="bg-blue-200"> */}
-              <Description>
+            {/* <div className="bg-blue-200"> */}
+            <Description>
               আমের হাট শুরু হয়েছিল ২০১৮ সালে, যখন আমরা দেখলাম যে বাংলাদেশের
               অনেক কৃষক তাদের উৎপাদিত আম সঠিক মূল্যে বিক্রি করতে পারছেন না। আমরা
               সিদ্ধান্ত নিলাম যে আমরা কৃষকদের সাথে সরাসরি যোগাযোগ করে তাদের
@@ -56,8 +56,7 @@ export default function AboutSection() {
               <ViewCard number="১০০০+" text="সন্তুষ্ট গ্রাহক" />
               <ViewCard number="১৫+" text="আমের প্রজাতি" />
             </div>
-{/* </div> */}
-
+            {/* </div> */}
           </SlideInRight>
         </div>
       </div>

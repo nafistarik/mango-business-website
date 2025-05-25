@@ -1,14 +1,14 @@
-import { faqList } from "@/data/faq-data";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import SlideInBottom from "./framer-motion/SlideInBottom";
-import Header from "./texts/Header";
-import Description from "./texts/Description";
-import OneByOneAnimation from "./framer-motion/OneByOneAnimation";
+import { faqList } from "@/data/faq-data";
+import OneByOneAnimation from "../../components/framer-motion/OneByOneAnimation";
+import SlideInBottom from "../../components/framer-motion/SlideInBottom";
+import Description from "../../components/texts/Description";
+import Header from "../../components/texts/Header";
 
 export default function FAQSection() {
   return (

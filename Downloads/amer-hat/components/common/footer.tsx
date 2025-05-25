@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Logo from "./common/Logo";
+import Logo from "@/components/common/Logo";
 import { socialLinks } from "@/data/social-links";
 import { routeLinks } from "@/data/route-links";
 import { mangoLinks } from "@/data/mango-links";

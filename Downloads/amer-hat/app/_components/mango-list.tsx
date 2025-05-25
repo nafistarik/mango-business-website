@@ -1,8 +1,8 @@
+import MangoCard from "@/components/cards/mango-card";
 import { mangoList } from "@/data/mango-data";
-import MangoCard from "@/components/mango-card";
-import SlideInBottom from "./framer-motion/SlideInBottom";
-import Header from "./texts/Header";
-import Description from "./texts/Description";
+import SlideInBottom from "../../components/framer-motion/SlideInBottom";
+import Description from "../../components/texts/Description";
+import Header from "../../components/texts/Header";
 
 export default function MangoList() {
   return (

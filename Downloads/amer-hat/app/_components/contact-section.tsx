@@ -1,11 +1,11 @@
-import SlideInLeft from "./framer-motion/SlideInLeft";
-import SlideInRight from "./framer-motion/SlideInRight";
-import SlideInBottom from "./framer-motion/SlideInBottom";
-import Header from "./texts/Header";
-import Description from "./texts/Description";
-import Title from "./texts/Title";
-import ContactItem from "./common/ContactItem";
 import { contactItems } from "@/data/contact-data";
+import ContactItem from "../../components/cards/ContactItem";
+import SlideInBottom from "../../components/framer-motion/SlideInBottom";
+import SlideInLeft from "../../components/framer-motion/SlideInLeft";
+import SlideInRight from "../../components/framer-motion/SlideInRight";
+import Description from "../../components/texts/Description";
+import Header from "../../components/texts/Header";
+import Title from "../../components/texts/Title";
 
 export default function ContactSection() {
   return (

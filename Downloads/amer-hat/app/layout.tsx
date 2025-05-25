@@ -1,9 +1,9 @@
-import type React from "react";
+import Navbar from "@/components/common/navbar";
+import Footer from "@/components/common/footer";
 import type { Metadata } from "next";
 import { Hind_Siliguri } from "next/font/google";
+import type React from "react";
 import "./globals.css";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
 
 const hindSiliguri = Hind_Siliguri({
   subsets: ["bengali"],

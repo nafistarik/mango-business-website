@@ -3,10 +3,10 @@
 import navLinks from "@/data/nav-links";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import GreenButton from "./buttons/GreenButton";
-import MobileNavLink from "./buttons/MobileNavLink";
-import NavLink from "./buttons/NavLink";
-import Logo from "./common/Logo";
+import GreenButton from "../buttons/GreenButton";
+import MobileNavLink from "../buttons/MobileNavLink";
+import NavLink from "../buttons/NavLink";
+import Logo from "./Logo";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

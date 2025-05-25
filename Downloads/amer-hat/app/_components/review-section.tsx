@@ -1,11 +1,11 @@
-import Image from "next/image";
-import { Star } from "lucide-react";
 import { reviewList } from "@/data/review-data";
-import SlideInBottom from "./framer-motion/SlideInBottom";
-import Header from "./texts/Header";
-import Description from "./texts/Description";
-import Name from "./texts/Name";
-import OneByOneAnimation from "./framer-motion/OneByOneAnimation";
+import { Star } from "lucide-react";
+import Image from "next/image";
+import OneByOneAnimation from "../../components/framer-motion/OneByOneAnimation";
+import SlideInBottom from "../../components/framer-motion/SlideInBottom";
+import Description from "../../components/texts/Description";
+import Header from "../../components/texts/Header";
+import Name from "../../components/texts/Name";
 
 export default function ReviewSection() {
   return (

@@ -1,11 +1,10 @@
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { ShoppingCart, Calendar } from "lucide-react";
 import type { Mango } from "@/data/mango-data";
-import OneByOneAnimation from "./framer-motion/OneByOneAnimation";
-import GreenButton from "./buttons/GreenButton";
-import Title from "./texts/Title";
-import Description from "./texts/Description";
+import { Calendar, ShoppingCart } from "lucide-react";
+import Image from "next/image";
+import GreenButton from "../buttons/GreenButton";
+import OneByOneAnimation from "../framer-motion/OneByOneAnimation";
+import Description from "../texts/Description";
+import Title from "../texts/Title";
 
 interface MangoCardProps {
   mango: Mango;
